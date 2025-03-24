@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+    <div class="w-[250px] h-[300px] bg-zinc-400  flex flex-wrap item-center justify-center rounded-xl gap-2 m-5 " >
+        <img class="w-[300px] h-[200px] p-4 rounded-xl object-cover" src= <%= user.image %> alt="">
+        <div class=" text">
+            <h1 class=""><%= user.name %></h1>
+            <h3><%= user.email %></h3>
+        </div>
+       
+    </div>
+    
+</body>
+</html>

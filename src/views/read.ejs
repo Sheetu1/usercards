@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="w-full h-screen bg-zinc-300 p-10">
+    <a class="inline-block text-xl text-blue-600 my-4" href="/">Go to home Page</a>
+    <div class="w-full flex gap-8 flex-wrap">
+        <% users.forEach(function(item){ %>
+            <div class="w-[250px] h-[300px] bg-white rounded-xl ">
+                <img class="w-full h-[80%] object-cover rounded-xl p-5 " src="<%= item.image %>" alt="">
+                <div class="flex items-center justify-between px-6">
+                    <a class=" font-bold hover:underline " href="/details/<%= item._id %>"> <%= item.name %> </a>
+                    <a class="text-xs bg-red-500 px-2 py-1 rounded-full text-white" href="/delete/<%= item._id %>">Delete</a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+    
+</body>
+</html>
